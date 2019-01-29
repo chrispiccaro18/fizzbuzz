@@ -1,12 +1,16 @@
 const test = QUnit.test;
 
 function fizzBuzz(number) {
+    const fizz = 'Fizz';
+    const buzz = 'Buzz';
+    const space = ' ';
+    
     if(number % 15 === 0) {
-        return 'FizzBuzz ' + number;
+        return fizz + buzz + space + number;
     } else if(number % 3 === 0) {
-        return 'Fizz ' + number; 
+        return fizz + space + number; 
     } else if(number % 5 === 0) {
-        return 'Buzz ' + number;
+        return buzz + space + number;
     }
     return number;
 }
@@ -31,26 +35,6 @@ test('return Buzz + number if number is divisible by 5', function(assert) {
     const expected = 'Buzz 5';
     assert.equal(result, expected);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 test('return Fizz + number when the number is divisible by 3', function(assert){
     const inputNumber = 3;
